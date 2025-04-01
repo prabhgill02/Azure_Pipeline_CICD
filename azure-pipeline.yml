@@ -38,5 +38,5 @@ stages:
           - task: AzureFunctionApp@1
             inputs:
               azureSubscription: "rg_func_pipeline_svc" # Replace with your Azure service connection name
-              appName: "HelloFunction" # Replace with your Azure Function App name
+              appName: "azure-function" # Replace with your Azure Function App name
               package: "$(Build.ArtifactStagingDirectory)/**/*.zip"
