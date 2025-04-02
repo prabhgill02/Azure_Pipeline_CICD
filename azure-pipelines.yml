@@ -14,7 +14,7 @@ variables:
   functionAppName: "azure-function"
 
   # Agent VM image name
-  vmImageName: "PRABH"
+  vmImageName: "Default"
 
   # Working Directory
   workingDirectory: "$(System.DefaultWorkingDirectory)/azure-function"
