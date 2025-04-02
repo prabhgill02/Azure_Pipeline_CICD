@@ -13,9 +13,6 @@ variables:
   # Function app name
   functionAppName: "azure-function"
 
-  # Agent VM image name
-  vmImageName: "Default"
-
   # Working Directory
   workingDirectory: "$(System.DefaultWorkingDirectory)/azure-function"
 
@@ -27,7 +24,7 @@ stages:
       - job: Build
         displayName: Build
         pool:
-          vmImage: $(vmImageName)
+          name: "Default"
 
         steps:
           - task: DotNetCoreCLI@2
@@ -60,7 +57,7 @@ stages:
         displayName: Deploy
         environment: "development"
         pool:
-          vmImage: $(vmImageName)
+          name: "Default"
 
         strategy:
           runOnce:
